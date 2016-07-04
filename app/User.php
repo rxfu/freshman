@@ -21,8 +21,40 @@ class User extends Authenticatable {
 	 * @var array
 	 */
 	protected $hidden = [
-		'password', 'remember_token',
+		'mmbh',
 	];
 
 	protected $table = 'xkxx';
+
+	protected $primaryKey = 'ksh';
+
+	public $incrementing = false;
+
+	public $timestamps = false;
+
+	public function getAuthIdentifierName() {
+		return $this->ksh;
+	}
+
+	public function getAuthPassword() {
+		return $this->mmbh;
+	}
+
+	public function getRememberToken() {
+		return null;
+	}
+
+	public function setRememberToken($value) {
+
+	}
+
+	public function getRememberTokenName() {
+		return null;
+	}
+
+	public function setAttribute($key, $value) {
+		if ($key != $this->getRememberTokenName()) {
+			parent::setAttribute($key, $value);
+		}
+	}
 }
