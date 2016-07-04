@@ -18,5 +18,5 @@ Route::get('/', function () {
 Route::auth();
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('register', ['as' => 'home', 'uses' => 'HomeController']);
+	Route::get('register', ['as' => 'home', 'uses' => 'HomeController@index']);
 });
