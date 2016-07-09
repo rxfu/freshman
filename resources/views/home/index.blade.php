@@ -41,14 +41,13 @@
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <th class="active">学号</th>
-                            <td>{{ $profile->xh }}</td>
-                            <th class="active">姓名</th>
-                            <td>{{ $profile->xm }}</td>
-                            <th class="active">曾用名</th>
-                            <td>{{ $profile->cym }}</td>
-                            <th class="active">拼音</th>
-                            <td>{{ $profile->xmpy }}</td>
+                            <th class="active">考生号</th>
+                            <td>{{ $profile->ksh }}</td>
+                            <th class="active">准考证号</th>
+                            <td>{{ $profile->zkzh }}</td>
+                            <td class="active" colspan="2" rowspan="4">
+                                <img src="{{ url('profile/portrait') }}" alt="{{ $profile->xm }}" width="240" class="img-rounded" >
+                            </td>
                         </tr>
                         <tr>
                             <th class="active">性别</th>
