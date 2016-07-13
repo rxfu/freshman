@@ -45,49 +45,105 @@
                             <td>{{ $profile->ksh }}</td>
                             <th class="active">准考证号</th>
                             <td>{{ $profile->zkzh }}</td>
-                            <td class="active" colspan="2" rowspan="4">
-                                <img src="{{ url('profile/portrait') }}" alt="{{ $profile->xm }}" width="240" class="img-rounded" >
+                            <th class="active">姓名</th>
+                            <td>{{ $profile->xm }}</td>
+                            <td class="active" colspan="2" rowspan="9">
+                                <img src="{{ $profile->zp }}" alt="{{ $profile->xm }}" width="240" class="img-rounded" >
                             </td>
                         </tr>
                         <tr>
                             <th class="active">性别</th>
-                            <td>{{ $profile->gender->mc }}</td>
+                            <td>{{ $profile->xbdm }}</td>
                             <th class="active">出生日期</th>
                             <td>{{ $profile->csny }}</td>
-                            <th class="active">证件类型</th>
-                            <td>{{ $profile->idtype->mc }}</td>
-                            <th class="active">证件号码</th>
-                            <td>{{ $profile->sfzh }}</td>
-                        </tr>
-                        <tr>
-                            <th class="active">国籍</th>
-                            <td>{{ $profile->country->mc }}</td>
                             <th class="active">民族</th>
-                            <td>{{ $profile->nation->mc }}</td>
-                            <th class="active">籍贯</th>
-                            <td>{{ $profile->jg }}</td>
+                            <td>{{ $profile->mzdm }}</td>
+                        </tr>
+                        <tr>
                             <th class="active">政治面貌</th>
-                            <td>{{ $profile->party->mc }}</td>
+                            <td>{{ $profile->zzmmdm }}</td>
+                            <th class="active">身份证号</th>
+                            <td>{{ $profile->sfzh }}</td>
+                            <th class="active">考生类别</th>
+                            <td>{{ $profile->kslbdm }}</td>
                         </tr>
                         <tr>
-                            <th class="active">生源地</th>
-                            <td>{{ $profile->province->mc }}</td>
-                            <th class="active">出生地</th>
-                            <td>{{ $profile->csd }}</td>
-                            <th class="active">学院</th>
-                            <td>{{ $profile->college->mc }}</td>
-                            <th class="active">系所</th>
-                            <td>{{ count($profile->school) ? $profile->school->mc : '' }}</td>
+                            <th class="active">毕业类别</th>
+                            <td>{{ $profile->bylbdm }}</td>
+                            <th class="active">毕业中学</th>
+                            <td>{{ $profile->zxmc }}</td>
+                            <th class="active">外语语种</th>
+                            <td>{{ $profile->wyyzdm }}</td>
                         </tr>
                         <tr>
-                            <th class="active">专业</th>
-                            <td>{{ $profile->major->mc }}</td>
-                            <th class="active">专业方向</th>
-                            <td>{{ $profile->zyfs }}</td>
-                            <th class="active">第二专业</th>
-                            <td>{{ count($profile->secondary) ? $profile->secondary->mc : '' }}</td>
-                            <th class="active">辅修专业</th>
-                            <td>{{ count($profile->minor) ? $profile->minor->mc : '' }}</td>
+                            <th class="active">地区</th>
+                            <td>{{ $profile->dqmc }}</td>
+                            <th class="active">考试类型</th>
+                            <td>{{ $profile->kslxdm }}</td>
+                            <th class="active">批次</th>
+                            <td>{{ $profile->pcmc }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">科类</th>
+                            <td>{{ $profile->klmc }}</td>
+                            <th class="active">投档成绩</th>
+                            <td>{{ $profile->tdcj }}</td>
+                            <th class="active">录取专业</th>
+                            <td>{{ $profile->lqzy }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">专业代码</th>
+                            <td>{{ $profile->lqzydm }}</td>
+                            <th class="active">院系</th>
+                            <td>{{ $profile->ssyx }}</td>
+                            <th class="active">学制</th>
+                            <td>{{ $profile->xz }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">是否师范</th>
+                            <td>{{ $profile->sfsf }}</td>
+                            <th class="active">投档志愿</th>
+                            <td>{{ $profile->tdzy }}</td>
+                            <th class="active">省市</th>
+                            <td>{{ $profile->szss }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">科目组</th>
+                            <td>{{ $profile->tddwmc }}</td>
+                            <th class="active">考生成绩</th>
+                            <td>{{ $profile->cj }}</td>
+                            <th class="active">特征成绩</th>
+                            <td>{{ $profile->tzcj }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">照顾分</th>
+                            <td>{{ $profile->zgf }}</td>
+                            <th class="active">超重点线</th>
+                            <td>{{ $profile->czdxf }}</td>
+                            <th class="active">语文</th>
+                            <td>{{ $profile->rwcj }}</td>
+                            <th class="active">数学</th>
+                            <td>{{ $profile->sxcj }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">英语</th>
+                            <td>{{ $profile->yrcj }}</td>
+                            <th class="active">招生年份</th>
+                            <td>{{ $profile->nf }}</td>
+                            <th class="active">家庭地址</th>
+                            <td>{{ $profile->jtdz }}</td>
+                            <th class="active">邮政编码</th>
+                            <td>{{ $profile->yzbm }}</td>
+                        </tr>
+                        <tr>
+                            <th class="active">联系电话</th>
+                            <td>{{ $profile->lxdh }}</td>
+                            <th class="active">考生特长</th>
+                            <td>{{ $profile->kstc }}</td>
+                            <th class="active">联系人</th>
+                            <td>{{ $profile->sjr }}</td>
+                            <th class="active">备注</th>
+                            <td>{{ $profile->bz }}</td>
                         </tr>
                     </table>
                 </div>
